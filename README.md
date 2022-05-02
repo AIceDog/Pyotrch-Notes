@@ -12,3 +12,5 @@ x = torch.rand(5, 1, 28, 28) # 设置输入图片, 输入图片数量是5, chann
 
 out = layer.forward(x) #完成一次卷积的前向运算, 输入图片是x
 ### output 是 torch.Size([5, 3, 26, 26)]
+
+out = layer(x)  #完成一次卷积的前向运算, 不过会先运行 hooks, 再运行 .forward 函数
